@@ -71,7 +71,7 @@ systemctl status apparmor --no-pager
 
 Это означает, что AppArmor установлен, но systemd service ещё не запущен.
 
-![image](images/1.png)
+![image](images3/1.png)
 
 ---
 
@@ -107,7 +107,7 @@ enabled
 - service успешно работает;
 - AppArmor profiles загружаются автоматически.
 
-![image](images/2.png)
+![image](images3/2.png)
 
 ---
 
@@ -161,7 +161,7 @@ echo "=== Finished ==="
 
 `/etc/shadow` содержит password hashes пользователей Linux и считается sensitive file.
 
-![image](images/3.png)
+![image](images3/3.png)
 
 ---
 
@@ -187,7 +187,7 @@ sudo /opt/apparmor-test/testscript.sh
 - Linux DAC permissions разрешают root практически всё;
 - AppArmor profile ещё отсутствует.
 
-![image](images/4.png)
+![image](images3/4.png)
 
 ---
 
@@ -262,7 +262,7 @@ sudo nano /etc/apparmor.d/opt.apparmor-test.testscript
 
 Без этого Bash не сможет загрузить system libraries.
 
-![image](images/5.png)
+![image](images3/5.png)
 
 ---
 
@@ -290,7 +290,7 @@ AppArmor profile не разрешал memory mapping (`m`) shared libraries.
 
 После этого Bash смог нормально запускаться.
 
-![image](images/6.png)
+![image](images3/6.png)
 
 ---
 
@@ -321,7 +321,7 @@ sudo aa-status | grep testscript
 - profile успешно загружен;
 - AppArmor контролирует script.
 
-![image](images/7.png)
+![image](images3/7.png)
 
 ---
 
@@ -350,7 +350,7 @@ AppArmor заблокировал:
 
 Это главный смысл Mandatory Access Control.
 
-![image](images/8.png)
+![image](images3/8.png)
 
 ---
 
@@ -393,7 +393,7 @@ denied_mask="x"
 
 Это forensic evidence работы MAC security controls.
 
-![image](images/9.png)
+![image](images3/9.png)
 
 ---
 
